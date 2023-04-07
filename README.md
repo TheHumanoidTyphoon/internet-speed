@@ -1,7 +1,7 @@
-Internet Speed Test
+#Internet Speed Test
 This is a Python script that tests your internet speed and generates various metrics and visualizations.
 
-Installation
+#Installation
 Clone the repository or download the files.
 Install the required Python packages: speedtest, tabulate, json, csv, numpy, statistics, matplotlib.
 Usage
