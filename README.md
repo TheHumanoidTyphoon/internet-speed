@@ -1,29 +1,28 @@
-Internet Speed Tester
-This script tests your internet speed by running a series of speed tests and measuring the download and upload speeds, ping time, latency, jitter, and packet loss. The results are plotted and saved to a CSV or JSON file.
+Internet Speed Test
+This is a Python script that tests your internet speed and generates various metrics and visualizations.
 
-Getting started
-To use this script, you'll need to have Python 3 installed on your computer. You can download Python from the official website.
-
-You'll also need to install the following packages:
-
-speedtest-cli
-matplotlib
-You can install these packages using pip:
-pip install speedtest-cli matplotlib
-
+Installation
+Clone the repository or download the files.
+Install the required Python packages: speedtest, tabulate, json, csv, numpy, statistics, matplotlib.
 Usage
-To run the script, open a terminal or command prompt and navigate to the directory containing the script. Then run the following command:
-python speedtest.py [num_tests] [output_file]
+To run the script, navigate to the directory where the files are saved and type the following command in your terminal:
+python speed_test.py
+Commands
+The script has the following commands:
 
-where num_tests is the number of speed tests to run (default is 3) and output_file is the name of the output file to save the results to (optional).
-
-For example, to run 5 speed tests and save the results to a CSV file called results.csv, run the following command:
-python speedtest.py 5 results.csv
-
-Output
-The script will output the results of each speed test to the console, as well as the average download speed, upload speed, ping time, latency, jitter, and packet loss. If multiple tests are run, the standard deviation of the download speeds will also be calculated and displayed.
-
-The script will also plot the download and upload speeds over time, and save the results to a CSV or JSON file, depending on the file extension specified.
+load_results(file_path): loads previous test results from a JSON file.
+run_tests(num_tests): runs a series of internet speed tests and generates metrics and visualizations.
+print_results(): prints the metrics generated from the most recent test.
+plot_results(): generates plots of the download and upload speeds and the ping times.
+save_results(file_path, format): saves the results of the most recent test to a JSON or CSV file.
+Example
+Here's an example of how to use the script:
+speed_test = SpeedTest()
+speed_test.load_results('results.json')
+speed_test.run_tests(3)
+speed_test.print_results()
+speed_test.plot_results()
+speed_test.save_results('results.csv', format='csv')
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
