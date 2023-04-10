@@ -1,6 +1,6 @@
 # Internet Speed Test
 
-This is a Python script that tests your internet speed and generates various metrics and visualizations.
+This Python script measures your internet speed by performing a series of download, upload, and ping tests using the speedtest library. The results are displayed as a table of metrics, such as average download speed, median upload speed, and standard deviation of ping times. Additionally, the results can be plotted in a line chart and a histogram. The results can be saved in either JSON or CSV format for later analysis.
 
 ## Installation
 Clone the repository or download the files.
