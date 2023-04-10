@@ -13,6 +13,10 @@ Install the required Python packages:
 - `statistics` 
 - `matplotlib`
 ## Usage
+Install the required dependencies by running:
+```python
+pip install -r requirements.txt
+```
 To run the script, navigate to the directory where the files are saved and type the following command in your terminal:
 ```python
 python speed_test.py
@@ -27,12 +31,25 @@ The script has the following commands:
 ## Example
 Here's an example of how to use the script:
 ```python
-speed_test = SpeedTest()
-speed_test.load_results('results.json')
-speed_test.run_tests(3)
-speed_test.print_results()
-speed_test.plot_results()
-speed_test.save_results('results.csv', format='csv')
+from speed_test import SpeedTest
+
+# Create a new instance of the SpeedTest class
+st = SpeedTest()
+
+# Load previously saved results
+st.load_results('results.json')
+
+# Run new tests
+st.run_tests(3)
+
+# Print the results to the console
+st.print_results()
+
+# Plot the results
+st.plot_results()
+
+# Save the results in CSV format
+st.save_results('results.csv', format='csv')
 ```
 
 ## License
